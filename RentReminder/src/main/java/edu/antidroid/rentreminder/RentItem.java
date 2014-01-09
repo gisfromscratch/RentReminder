@@ -1,5 +1,7 @@
 package edu.antidroid.rentreminder;
 
+import java.util.Date;
+
 /**
  * Represents a rent item.
  */
@@ -10,6 +12,8 @@ public class RentItem {
     private String rentLabel = "...";
 
     private RentItemType rentItemType = RentItemType.Book;
+
+    private Date rentDate = new Date();
 
     private boolean checked = false;
 
@@ -35,6 +39,14 @@ public class RentItem {
 
     public void setRentItemType(RentItemType rentItemType) {
         this.rentItemType = rentItemType;
+    }
+
+    public Date getRentDate() {
+        return rentDate;
+    }
+
+    public void setRentDate(Date rentDate) {
+        this.rentDate = rentDate;
     }
 
     public void setChecked(boolean checked) {

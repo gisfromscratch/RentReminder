@@ -6,11 +6,15 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Represents a view for adding rent items.
@@ -21,6 +25,7 @@ public class AddRentItemDialog {
     private Spinner rentItemTypeSpinner;
     private EditText labelEditText;
     private EditText rentLabelEditText;
+    private DatePicker rentDatePicker;
 
     private ArrayAdapter<RentItemType> rentItemTypesAdapter;
 
@@ -41,6 +46,8 @@ public class AddRentItemDialog {
         labelEditText = (EditText) addNewView.findViewById(R.id.addNew_labelTextInput);
         rentLabelEditText = (EditText) addNewView.findViewById(R.id.addNew_rentLabelTextInput);
 
+        rentDatePicker = (DatePicker) addNewView.findViewById(R.id.addNew_rentDateInput);
+
         dialog.setView(addNewView);
     }
 
@@ -48,6 +55,10 @@ public class AddRentItemDialog {
         newRentItem.setRentItemType((RentItemType) rentItemTypeSpinner.getSelectedItem());
         newRentItem.setLabel(labelEditText.getText().toString());
         newRentItem.setRentLabel(rentLabelEditText.getText().toString());
+
+        Calendar calendar = Calendar.getInstance(Locale.getDefault());
+        calendar.set(rentDatePicker.getYear(), rentDatePicker.getMonth(), rentDatePicker.getDayOfMonth());
+        newRentItem.setRentDate(calendar.getTime());
         return newRentItem;
     }
 

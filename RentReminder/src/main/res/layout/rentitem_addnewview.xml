@@ -7,6 +7,8 @@
         android:id="@+id/addNew_rentItemType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:text="Type:"
@@ -17,13 +19,18 @@
         android:id="@+id/addNew_rentItemTypeSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/addNew_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:text="Label:"
@@ -34,8 +41,11 @@
         android:id="@+id/addNew_labelTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp" >
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" >
 
         <requestFocus />
 
@@ -45,6 +55,8 @@
         android:id="@+id/addNew_rentLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:text="Rent to:"
@@ -55,10 +67,33 @@
         android:id="@+id/addNew_rentLabelTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp">
-
-        <requestFocus />
-
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" >
     </EditText>
+
+    <TextView
+        android:id="@+id/addNew_rentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Rent date:"
+        android:textSize="15dp" >
+    </TextView>
+
+    <DatePicker
+        android:id="@+id/addNew_rentDateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp" >
+    </DatePicker>
 </LinearLayout>

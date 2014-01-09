@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -37,6 +38,10 @@ public class RentItemArrayAdapter extends ArrayAdapter<RentItem> {
 
         TextView rentLabelView = (TextView) rowView.findViewById(R.id.rent_label);
         rentLabelView.setText(rentItem.getRentLabel());
+
+        TextView dateLabelView = (TextView) rowView.findViewById(R.id.date_label);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        dateLabelView.setText(dateFormat.format(rentItem.getRentDate()));
 
         CheckBox checkBox = (CheckBox) rowView.findViewById(R.id.checkbox);
         checkBox.setChecked(rentItem.getChecked());
