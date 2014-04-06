@@ -16,6 +16,6 @@ public class SQLiteWorkspaceFactory {
     }
 
     public SQLiteWorkspace openWorkspace(String workspaceName) {
-        return new SQLiteWorkspace(context, workspaceName, workspaceVersion.getVersionNumber());
+        return new SQLiteWorkspace(workspaceName, workspaceVersion);
     }
 }
